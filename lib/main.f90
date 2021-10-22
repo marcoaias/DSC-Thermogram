@@ -7,13 +7,13 @@ program main
     Ea = 1000.0
     !amount present in the sample to cure
     mol = 0.6
-    !chemicals A and B; proxy DGEBA-DDM, reaction ratio 
+    !chemicals A and B; proxy DGEBA-DDM, reaction ratio
     A = 2.0
     B = 1.0
 
     !vitreous transition temperature for the resin, size of jump
     Tg = 60.0
-    TgJump = 1.0
+    TgJump = 0.70
 
     !temperature for which a curation reaction starts occuring
     Tr = 120.0

@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+
+
+
+%\usepackage{mathabx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{gensymb}
+\usepackage[version=3]{mhchem}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{graphicx,subcaption}
+\usepackage{amsmath}
+\usepackage{mathtools,array,booktabs}
+\usepackage{cancel}
+\usepackage{tabularx}
+\usepackage{graphicx}
+
+\usepackage{chemfig}
+
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex} %Imports biblatex package
+
+
+
+
+
+
+\begin{document}
+
+
+\begin{figure} [!h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    title={DSC Thermogram},
+    xlabel={$T$},
+    ylabel={$\phi Q$},
+    % xmode=log,
+    %xmin=0, xmax=100,
+    % ymin=0, %ymax=30,
+    ticks=none,
+    % xtick={50, 164},
+    % xticklabels={$T_g$, $T_peak$},
+    xticklabels=none,
+    yticklabels=none,
+    % extra x ticks={50},
+    % extra x tick labels={$T_g = 50$ \celsius},
+    legend pos=south east,
+    ymajorgrids=true,
+    xmajorgrids=true,
+    grid style=dashed,
+    width=12cm,
+    height=8cm,
+    cycle list name=color list,
+    %axis x line=center,
+    %axis y line=middle,
+    % ytick={110,120,126,130, 140, 150},
+    % yticklabels={110,120,\tiny $T_B$,130, 140, 150},
+    %domain=0:2*pi
+]
+     % \addplot table {data/dsc1.dat};
+     % \addplot table {dsc.dat};
+     \addplot table {dsc1.dat};
+     % \addplot table {dsc2.dat};
+
+
+\end{axis}
+\end{tikzpicture}
+\caption{Sample thermogram}\label{fig:thermos}
+\end{figure}
+
+\end{document}

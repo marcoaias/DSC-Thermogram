@@ -6,4 +6,8 @@ Inputs to alter the qualitative nature of the `thermogram`; range from the *vitr
 
 None of these inputs and outputs are really considered to be any accurate or representative of any *real* `DSC Thermogram`. This script is thought out for comparing different resin curing grades, transition temperatures, remaining reaction enthalpy in a qualitative manner. Nothing is to be measured.
 
-Aside, the model used for generating such is rather crude and simple. Still, it is the shape of the function what matters.  
+Aside, the model used for generating such is rather crude and simple. Still, it is the shape of the function what matters.
+
+Sample:
+
+![DSC Thermogram](sample.png "DSC Thermogram")
