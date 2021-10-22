@@ -1,6 +1,7 @@
 program main
     implicit none
 
+    character(len=20) :: yn
     real(8) :: A, B, Tg, Tr, dh, T, c1, c2, Q, Tpeak, k, Ac, Ea, delta, mol, TgJump, T0, Tf
 
     !activation energy for curation
@@ -40,6 +41,54 @@ program main
 
     !heat flow function y(0)
     Q = 13.0
+
+
+    print *, "Enter values? [y/n]"
+    read *, yn
+
+    if (yn == "y") then
+      print *, "Enter activation energy:"
+      read *, Ea
+
+      print *, "Enter amount:"
+      read *, mol
+
+      print *, "Enter chemical ratio:"
+      read *, A
+
+      print *, "Enter vitreous transition temperature:"
+      read *, Tg
+
+      print *, "Enter vitreous transition jump size:"
+      read *, TgJump
+
+      print *, "Enter reaction temperature:"
+      read *, Tr
+
+      print *, "Enter peak reaction temperature:"
+      read *, Tpeak
+
+      print *, "Enter temperature scanning range:"
+      read *, T0
+      read *, Tf
+      T = T0
+
+      print *, "Enter heat coeficients, before/after vitreous transition:"
+      read *, c1
+      read *, c2
+
+      A = A*mol
+      B = B*mol
+
+      print *, "Enter reaction enthalpy:"
+      read *, dh
+
+
+      print *, "Enter heat flow at T0:"
+      read *, Q
+    end if
+
+
 
     !output file
     open(1100, file="dsc1.dat", status="new")
